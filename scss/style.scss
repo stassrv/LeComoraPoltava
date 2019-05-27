@@ -89,7 +89,8 @@ a:hover {
 	fill: $primery-color;
 	width: 40px;
 	height: 40px;
-	&-menu2{
+
+	&-menu2 {
 		fill: #000000;
 	}
 }
@@ -180,6 +181,12 @@ img {
 	}
 }
 
+@media screen and (max-width: 1023px) {
+	.ba-header-bar {
+		padding-top: 0px;
+	}
+}
+
 nav {
 	display: flex;
 	align-items: center;
@@ -222,11 +229,20 @@ nav {
 		top: 0;
 		left: 0;
 		max-width: 250px;
-		background: rgba(0, 0, 0, 0.7);
-		padding: 120px 30px 30px 0;
+		background: rgba(246, 184, 5, 0.9);
+		padding: 120px 50px 50px 0;
 
 		transition: transform 0.3s;
-		transform: translateX(-100%)
+		transform: translateX(-100%);
+
+		li {
+			padding-bottom: 20px;
+
+			a {
+				color: #000000;
+				font-weight: 700;
+			}
+		}
 	}
 
 	.ba-menu.open {
@@ -239,6 +255,7 @@ nav {
 		border: none;
 		line-height: 1;
 		height: auto;
+		outline: none;
 	}
 
 	.ba-menu-toggle svg {
@@ -371,6 +388,12 @@ nav {
 	padding: 50px;
 }
 
+@media screen and (max-width: 1023px) {
+	.ba-filler {
+		padding: 40px;
+	}
+}
+
 .ba-gateway {
 	&__inner {
 		color: $primery-color;
@@ -431,6 +454,19 @@ nav {
 			font-size: 24px;
 			padding-bottom: 50px;
 			color: #fff;
+		}
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	.ba-about {
+		&__inner {
+			padding: 50px 0px;
+
+			p {
+				font-size: 20px;
+				padding-bottom: 20px;
+			}
 		}
 	}
 }
@@ -694,6 +730,49 @@ nav {
 	}
 }
 
+@media screen and (max-width: 1023px){
+	.ba-about-col{
+		margin-bottom: 20px;
+		&-inner {
+			padding-top: 0px;
+			h1 {
+				font-size: 50px;
+			}
+			&__item {
+				margin-bottom: 30px;
+				min-height: 400px;
+				p{
+					padding-bottom: 10px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 420px) and (max-width: 639px){
+	.ba-about-col{
+		&-inner {
+			&__item {
+				min-height: 420px;
+				img{
+					width: 60%;
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: 700px) and (max-width: 940px){
+	.ba-about-col{
+		&-inner {
+			&__item {
+				img{
+					width: 80%;
+				}
+			}
+		}
+	}
+}
+
 .ba-about-representation {
 	h3 {
 		text-align: center;
@@ -908,6 +987,82 @@ nav {
 	}
 }
 
+@media screen and (max-width: 1023px) {
+	.ba-footer {
+		padding: 0 0 20px 0;
+
+		&__action {
+			flex-direction: inherit;
+			justify-content: center;
+			align-items: center;
+
+			&__item {
+				height: 30px;
+				margin-bottom: 10px;
+
+				span {
+					font-size: 10px;
+					padding-top: 0px;
+				}
+			}
+		}
+
+		&__img {
+			width: 60px;
+			height: 60px;
+		}
+
+		&-inner {
+			&__logo {
+				padding-top: 20px;
+			}
+
+			&__socials {
+				p {
+					font-size: 15px;
+					line-height: 0.5;
+				}
+
+				span {
+					font-size: 8px;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 390px) {
+	.ba-footer {
+		&__action {
+			flex-direction: column;
+		}
+
+		&__img {
+			width: 20px;
+			height: 20px;
+		}
+	}
+}
+@media screen and (min-width: 391px) and (max-width: 501px){
+	.ba-footer {
+		&__action {
+			flex-direction: column;
+			&__item {
+				height: 30px;
+				margin-bottom: 10px;
+
+				span {
+					font-size: 10px;
+					padding-top: 0px;
+				}
+			}
+		}
+		&__img {
+			width: 20px;
+			height: 20px;
+		}
+	}
+}
+
 .ba-assortment {
 	&-inner {
 		padding: 50px 0 100px;
@@ -933,25 +1088,28 @@ nav {
 			stroke: currentColor;
 			fill: currentColor;
 
-			&--cheese{
+			&--cheese {
 				top: 10%;
 				// top: 200px;
 				left: -10%;
 				transform: rotate(50deg);
 			}
-			&--fondue{
+
+			&--fondue {
 				top: 30%;
 				// top: 400px;
 				left: 92%;
 				transform: rotate(-20deg);
 			}
-			&--wine{
+
+			&--wine {
 				top: 50%;
 				// top: 600px;
 				left: -5%;
 				transform: rotate(30deg);
 			}
-			&--coffe{
+
+			&--coffe {
 				top: 70%;
 				// top: 600px;
 				left: 96%;
@@ -962,37 +1120,74 @@ nav {
 	}
 }
 
+@media screen and (max-width: 1023px) {
+	.ba-assortment {
+		&-inner {
+			padding: 30px 0 80px;
+
+			h2 {
+				font-size: 40px;
+			}
+
+			.ba-decor-img {
+				display: none;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1259px){
+	.ba-assortment {
+		&-inner {
+			padding: 50px 0 350px;
+			.ba-decor-img {
+				display: none;	
+			}
+		}
+	}
+}
+@media screen and (min-width: 600px) and (max-width: 1023px){
+	.ba-assortment {
+		&-inner {
+			padding: 50px 0 150px;
+		}
+	}
+}
+
 .ba-accordion {
 	max-width: 800px;
 	margin: 0 auto;
 	position: relative;
 
-	
 
-	&:focus, &:hover{
-		dt{
-			svg{
+
+	&:focus,
+	&:hover {
+		dt {
+			svg {
 				display: inline-block;
 			}
 		}
 	}
 
-	dt{
+	dt {
 		display: flex;
 		justify-content: space-between;
 		position: relative;
-		svg{
+
+		svg {
 			display: none;
 			width: 30px;
 			height: 20px;
 
 		}
-				.icon-set{
-					display: inline-block;
-					position: absolute;
-					top: 30%;
-					fill: #000000;
-				}
+
+		.icon-set {
+			display: inline-block;
+			position: absolute;
+			top: 30%;
+			fill: #000000;
+		}
 	}
 
 	&:after {
@@ -1008,6 +1203,7 @@ nav {
 		transform: skewY(-2deg);
 		// transform-origin: 0 0;
 	}
+
 	&:before {
 		content: '';
 		position: absolute;
@@ -1034,19 +1230,20 @@ nav {
 		padding: 15px;
 		font-weight: 700;
 
-		&--bottom{
+		&--bottom {
 			border: none;
 		}
 	}
 
-	&--white{
-		.ba-accordion__title{
+	&--white {
+		.ba-accordion__title {
 			background: #fff;
-			box-shadow: inset 10px 95px 25px -75px rgba(246,184,5,1);
+			box-shadow: inset 10px 95px 25px -75px rgba(246, 184, 5, 1);
 		}
 	}
-	&--orange{
-		.ba-accordion__title{
+
+	&--orange {
+		.ba-accordion__title {
 			background: $decor-color;
 			box-shadow: inset 10px 95px 25px -75px rgba(255, 255, 255, 1);
 		}
@@ -1062,11 +1259,13 @@ nav {
 		padding: 15px;
 		box-shadow: inset 125px -108px 119px -94px rgba(0, 0, 0, 1);
 		padding: 20px;
-		&__img{
+
+		&__img {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			img{
+
+			img {
 				height: 250px;
 				padding-bottom: 20px;
 			}
@@ -1081,7 +1280,6 @@ nav {
 
 		span {
 			font-weight: 400;
-
 		}
 
 		&__item {
@@ -1110,17 +1308,24 @@ nav {
 	}
 }
 
-.ba-music {
-	background-color: #a53f3f;
-	color: #f4ce74;
-}
+@media screen and (max-width: 1023px) {
+	.ba-accordion {
+		max-width: 600px;
 
-.ba-books {
-	background-color: #ffe9c1;
-	color: #a53f3f;
-}
+		&__title {
+			font-size: 22px;
+			padding: 12px;
+		}
 
-.ba-notes {
-	background-color: #f4ce74;
-	color: #620808;
+		&__content {
+			box-shadow: none;
+			padding: 10px;
+
+			&__img {
+				img {
+					height: 200px;
+				}
+			}
+		}
+	}
 }
