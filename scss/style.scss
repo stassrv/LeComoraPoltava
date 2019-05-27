@@ -1212,7 +1212,7 @@ nav {
 		right: 0;
 		bottom: 0px;
 		height: 100%;
-		background-color: #ffffff;
+		background-color: $primery-color;
 		z-index: -1;
 		transform: skewY(-2deg);
 		// transform-origin: 0 0;
@@ -1286,7 +1286,7 @@ nav {
 			display: flex;
 			padding-bottom: 5px;
 			align-items: center;
-			justify-content: center;
+			justify-content: flex-start;
 
 			&--right {
 				padding: 0 5px;
