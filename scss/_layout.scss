@@ -67,12 +67,31 @@ body, html {
 .ba-row--collapse > [class*="ba-col-"] {
     padding-left: 0;
 }
+.ba-row--short {
+    margin-left: -10px;
+}
+.ba-row--short + .ba-row--short {
+    margin-top: 10px;
+}
+.ba-row--short > [class*="ba-col-"] {
+    padding-left: 10px;
+}
 
 .ba-row--300{
 	img{
 		object-fit: cover;
 		width: 100%;
 		height: 283px;
+	}
+	@media screen and (max-width:640px){
+		img{
+			height: 200px;
+		}
+	}
+	@media screen and (max-width:525px){
+		img{
+			height: 150px;
+		}
 	}
 }
 
@@ -81,6 +100,12 @@ body, html {
 		object-fit: cover;
 		width: 100%;
 		height: 600px;
+	}
+	@media screen and (max-width:1023px){
+		img{
+			height: 400px;
+			display: none;
+		}
 	}
 }
 
